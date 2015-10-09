@@ -37,12 +37,6 @@ tr.even {
     text-align: center; 
 }
 
-.class-schedule .currentWeek {
-    font-weight: bolder;
-    font-size: 125%;
-    background-color: rgb(255,255,255);
-}
-
 .class-schedule .topic {
     padding-left: 3ex;
     padding-right: 3ex;
@@ -55,4 +49,26 @@ tr.even {
     border-left-color: black; 
     padding-left: 2ex;
     font-style: italic;
+}
+
+.class-schedule .currentWeek {
+    font-weight: bolder;
+    font-size: 125%;
+    background-color: rgb(0,255,0);
+}
+
+.class-schedule .currentTopic {
+    padding-left: 3ex;
+    padding-right: 3ex;
+    background-color: rgb(0,255,0);
+    /* leave as default */
+}
+
+.class-schedule .currentProject {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: black; 
+    padding-left: 2ex;
+    font-style: italic;
+    background-color: rgb(0,255,0);
 }
