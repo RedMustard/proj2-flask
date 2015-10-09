@@ -1,37 +1,32 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<html> <head>
-<title>Course Schedule</title>
-  <link rel="stylesheet" type="text/css" href="static/css/syllabus.css"
-   media="screen"/> 
-  <link rel="stylesheet" type="text/css" href="static/css/syllabus-print.css"
-   media="print"/> 
+<html> 
+  <head>
+    <title>Course Schedule</title>
+    <link rel="stylesheet" type="text/css" href="static/css/syllabus.css"
+     media="screen"/> 
+    <link rel="stylesheet" type="text/css" href="static/css/syllabus-print.css"
+     media="print"/> 
+  </head>
 
-</head>
-
-<body>
-<h1>Schedule</h1>
-
-<table class="class-schedule">
-  {% for entry in session.schedule %}
-  {% if loop.index is divisibleby 2 %}
-  <tr class="even">
-  {% else %}
-  <tr class="odd">
-  {% endif %}
-  {% if entry.curWeekFlag == "1" %}
-    <td class="currentWeek">{{ entry.week }}</td>
-    <td class="currentTopic">{{ entry.topic }}</td>
-    <td class="currentProject">{{ entry.project }}</td>
-  {% else %}
-    <td class="Week">{{ entry.week }}</td>
-    <td class="Topic">{{ entry.topic }}</td>
-    <td class="Project">{{ entry.project }}</td>
-  {% endif %}
-  </tr>
-
-  {% endfor %}
-  
-
-
-
-</body> </html>
+  <body>
+    <h1>Schedule</h1>
+    <table class="class-schedule">
+      {% for entry in session.schedule %}
+      {% if loop.index is divisibleby 2 %}
+      <tr class="even">
+      {% else %}
+      <tr class="odd">
+      {% endif %}
+      {% if entry.curWeekFlag == "1" %}
+        <td class="currentWeek">{{ entry.week }}</td>
+        <td class="currentTopic">{{ entry.topic }}</td>
+        <td class="currentProject">{{ entry.project }}</td>
+      {% else %}
+        <td class="Week">{{ entry.week }}</td>
+        <td class="Topic">{{ entry.topic }}</td>
+        <td class="Project">{{ entry.project }}</td>
+      {% endif %}
+      </tr>
+      {% endfor %}
+  </body>
+</html>
