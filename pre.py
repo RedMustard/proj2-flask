@@ -41,11 +41,21 @@ def process(raw):
             if entry:
                 cooked.append(entry)
                 entry = { }
+
+            # Raise flag for current week
+            for r in arrow.Arrow.range('day', base.replace(weeks=+i), 
+                base.replace(weeks=+i).ceil('week')):
+                
+                if arrow.now().format("MM/DD/YYYY") == r.format("MM/DD/YYYY"):
+                    entry['curWeekFlag'] = "1" 
+
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = "Week " + content + " - " + base.replace(
-                weeks=+i).format("MM.DD.YY")
+                weeks=+i).format("MM/DD/YY")
+            
             i += 1
+
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
