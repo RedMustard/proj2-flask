@@ -14,6 +14,7 @@ def process(raw):
     field = None
     entry = { }
     cooked = [ ] 
+    i = 0
     for line in raw:
         line = line.rstrip()
         if len(line) == 0:
@@ -31,7 +32,7 @@ def process(raw):
 
         if field == "begin":
             try:
-                base = arrow.get(content)
+                base = arrow.get(content, "MM/DD/YYYY")
             except:
                 raise ValueError("Unable to parse date {}".format(content))
 
@@ -41,7 +42,8 @@ def process(raw):
                 entry = { }
             entry['topic'] = ""
             entry['project'] = ""
-            entry['week'] = content
+            entry['week'] = base.replace(weeks=+i).format("MM.DD.YY")
+            i += 1
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
