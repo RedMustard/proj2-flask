@@ -15,6 +15,7 @@ def process(raw):
     entry = { }
     cooked = [ ] 
     i = 0
+
     for line in raw:
         line = line.rstrip()
         if len(line) == 0:
@@ -42,7 +43,8 @@ def process(raw):
                 entry = { }
             entry['topic'] = ""
             entry['project'] = ""
-            entry['week'] = base.replace(weeks=+i).format("MM.DD.YY")
+            entry['week'] = "Week " + content + " - " + base.replace(
+                weeks=+i).format("MM.DD.YY")
             i += 1
 
         elif field == 'topic' or field == 'project':
