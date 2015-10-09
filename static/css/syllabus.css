@@ -32,8 +32,8 @@ tr.even {
 
 .class-schedule .week {
     
-    font-weight: bolder;
-    font-size: 150%; 
+    font-weight: bold;
+    font-size: 125%; 
     text-align: center; 
 }
 
@@ -53,7 +53,7 @@ tr.even {
 
 .class-schedule .currentWeek {
     font-weight: bolder;
-    font-size: 125%;
+    font-size: 150%;
     background-color: rgb(0,255,0);
 }
 
@@ -61,6 +61,7 @@ tr.even {
     padding-left: 3ex;
     padding-right: 3ex;
     background-color: rgb(0,255,0);
+    font-weight: bold;
     /* leave as default */
 }
 
@@ -70,5 +71,6 @@ tr.even {
     border-left-color: black; 
     padding-left: 2ex;
     font-style: italic;
+    font-weight: bold;
     background-color: rgb(0,255,0);
 }
