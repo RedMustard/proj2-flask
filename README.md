@@ -1,4 +1,8 @@
-# proj2-flask
+## URL on ix
+http://ix.cs.uoregon.edu/~ttb/CIS399/htbin/proj2-flask/app.cgi/
+
+
+## proj2-flask
 A starter project for using the Flask framework
 
 ## Basic task
